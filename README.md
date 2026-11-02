@@ -4,10 +4,12 @@
 
 # 🚀 Awesome Java Extensibility & Runtime
 
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-hhe-badge&logo=discord&logoColor=white" alt="Discord" /></a>
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ishandutta2007/Awesome-Java-Extensibility-Runtime/graphs/commit-activity)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
 **Curated directory of enterprise SaaS cloud execution platforms, serverless function runtimes, Ahead-Of-Time (AOT) native compilation engines, and open-source JVM modular extensibility frameworks.**
 
@@ -31,6 +33,8 @@
   - [Dynamic Plugin & Extensibility Frameworks](#-dynamic-plugin-frameworks--microkernel-engines)
   - [Serverless SDKs & Cloud Function Adapters](#-serverless-function-sdks--adapters)
 - [🎯 Architectural Selection Guide](#-architectural-selection-guide)
+- [💖 Support & Community](#-support--community)
+- [🌟 Star History](#-star-history)
 - [🤝 How to Contribute](#-how-to-contribute)
 - [⚖️ Disclaimer & Compliance](#-disclaimer--compliance)
 
@@ -127,6 +131,24 @@ Explore top-tier, community-governed open-source tools, native compilers, server
 - **For Enterprise SQL Data Transformation**: Leverage **Snowflake Java UDFs** or **Apache Spark Java APIs** to execute logic in close physical proximity to analytics datasets.
 - **For Dynamic Desktop or Server Plugin Ecosystems**: Integrate **PF4J** for classloader-isolated extension points without full OSGi complexity.
 - **For Enterprise Hybrid Deployments**: Enforce container cgroup limits (`-XX:+UseContainerSupport`) on **Red Hat OpenShift** to ensure JVM heap sizing adheres to Kubernetes pod boundaries.
+
+---
+
+## 💖 Support & Community
+
+Thank you so much for exploring and supporting the **Awesome Java Extensibility & Runtime** ecosystem! 🙏
+
+If you found this curated list helpful, here are ways you can support the project:
+- ⭐ **Star this repository** to help others discover it across GitHub.
+- 🍴 **Fork and contribute** by adding new cutting-edge runtimes, libraries, and benchmarks.
+- 📢 **Share with colleagues and teams** building cloud-native, serverless, or native JVM services.
+- ☕ **Buy a coffee & sponsor**: Support ongoing research, updates, and open-source curation on the [Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## 🌟 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Java-Extensibility-Runtime&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Java-Extensibility-Runtime&type=date&legend=top-left)
 
 ---
 
