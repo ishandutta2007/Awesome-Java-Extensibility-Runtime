@@ -75,38 +75,38 @@ Explore top-tier, community-governed open-source tools, native compilers, server
 
 *High-performance web stacks, ahead-of-time (AOT) native compilation, and microservice backbones.*
 
-- **[Spring Boot](https://github.com/spring-projects/spring-boot)** [![GitHub stars](https://img.shields.io/github/stars/spring-projects/spring-boot?style=social&color=white)](https://github.com/spring-projects/spring-boot/stargazers) — The world's leading Java application framework (Apache 2.0). Features GraalVM Native Image compilation via Spring AOT, Docker Buildpacks integration, and native Spring MVC/Tomcat execution.
-- **[Apache Spark](https://github.com/apache/spark)** [![GitHub stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers) — Distributed data processing engine (Apache 2.0) with first-class Java APIs for RDDs, DataFrames, structured streaming, and scalable SQL transformations across enterprise clusters.
-- **[GraalVM Compiler & Native Image](https://github.com/oracle/graal)** [![GitHub stars](https://img.shields.io/github/stars/oracle/graal?style=social&color=white)](https://github.com/oracle/graal/stargazers) — Polyglot VM and Ahead-Of-Time (AOT) compiler engine compiling Java code directly into instant-on, memory-efficient native executables with zero JVM warm-up.
-- **[Quarkus](https://github.com/quarkusio/quarkus)** [![GitHub stars](https://img.shields.io/github/stars/quarkusio/quarkus?style=social&color=white)](https://github.com/quarkusio/quarkus/stargazers) — Supersonic Subatomic Java (Apache 2.0). Kubernetes-native stack tailored for GraalVM Native Image and HotSpot, offering sub-millisecond boot times, continuous testing, and 500+ extensions.
-- **[Micronaut Core](https://github.com/micronaut-projects/micronaut-core)** [![GitHub stars](https://img.shields.io/github/stars/micronaut-projects/micronaut-core?style=social&color=white)](https://github.com/micronaut-projects/micronaut-core/stargazers) — Modern, JVM-based full-stack framework designed for modular microservices and serverless functions with compile-time dependency injection and zero-reflection native binaries.
+- **[Spring Boot](https://github.com/spring-projects/spring-boot)** [![GitHub_Stars](https://img.shields.io/github/stars/spring-projects/spring-boot?style=social&color=white)](https://github.com/spring-projects/spring-boot/stargazers) — The world's leading Java application framework (Apache 2.0). Features GraalVM Native Image compilation via Spring AOT, Docker Buildpacks integration, and native Spring MVC/Tomcat execution.
+- **[Apache Spark](https://github.com/apache/spark)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers) — Distributed data processing engine (Apache 2.0) with first-class Java APIs for RDDs, DataFrames, structured streaming, and scalable SQL transformations across enterprise clusters.
+- **[GraalVM Compiler & Native Image](https://github.com/oracle/graal)** [![GitHub_Stars](https://img.shields.io/github/stars/oracle/graal?style=social&color=white)](https://github.com/oracle/graal/stargazers) — Polyglot VM and Ahead-Of-Time (AOT) compiler engine compiling Java code directly into instant-on, memory-efficient native executables with zero JVM warm-up.
+- **[Quarkus](https://github.com/quarkusio/quarkus)** [![GitHub_Stars](https://img.shields.io/github/stars/quarkusio/quarkus?style=social&color=white)](https://github.com/quarkusio/quarkus/stargazers) — Supersonic Subatomic Java (Apache 2.0). Kubernetes-native stack tailored for GraalVM Native Image and HotSpot, offering sub-millisecond boot times, continuous testing, and 500+ extensions.
+- **[Micronaut Core](https://github.com/micronaut-projects/micronaut-core)** [![GitHub_Stars](https://img.shields.io/github/stars/micronaut-projects/micronaut-core?style=social&color=white)](https://github.com/micronaut-projects/micronaut-core/stargazers) — Modern, JVM-based full-stack framework designed for modular microservices and serverless functions with compile-time dependency injection and zero-reflection native binaries.
 
 ### 🌐 Distributed RPC & Service Mesh Frameworks
 
 *Enterprise microservice communication, governance, and protocol extensibility.*
 
-- **[Apache Dubbo](https://github.com/apache/dubbo)** [![GitHub stars](https://img.shields.io/github/stars/apache/dubbo?style=social&color=white)](https://github.com/apache/dubbo/stargazers) — High-performance, Java-based open-source RPC framework (Apache 2.0) providing microservice service discovery, traffic routing, intelligent load balancing, and plugin-based protocol extensibility.
+- **[Apache Dubbo](https://github.com/apache/dubbo)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/dubbo?style=social&color=white)](https://github.com/apache/dubbo/stargazers) — High-performance, Java-based open-source RPC framework (Apache 2.0) providing microservice service discovery, traffic routing, intelligent load balancing, and plugin-based protocol extensibility.
 
 ### 🚀 Reactive & Event-Driven Runtimes
 
 *Non-blocking, reactive event engines built for extreme concurrency and low memory usage.*
 
-- **[Eclipse Vert.x](https://github.com/eclipse-vertx/vert.x)** [![GitHub stars](https://img.shields.io/github/stars/eclipse-vertx/vert.x?style=social&color=white)](https://github.com/eclipse-vertx/vert.x/stargazers) — A tool-kit for building reactive applications on the JVM (Eclipse Public License / Apache 2.0). Event-driven, non-blocking runtime handling massive throughput with negligible resource consumption.
+- **[Eclipse Vert.x](https://github.com/eclipse-vertx/vert.x)** [![GitHub_Stars](https://img.shields.io/github/stars/eclipse-vertx/vert.x?style=social&color=white)](https://github.com/eclipse-vertx/vert.x/stargazers) — A tool-kit for building reactive applications on the JVM (Eclipse Public License / Apache 2.0). Event-driven, non-blocking runtime handling massive throughput with negligible resource consumption.
 
 ### 🧩 Dynamic Plugin Frameworks & Microkernel Engines
 
 *In-process modularity, runtime isolation, and dynamic plugin architectures.*
 
-- **[PF4J (Plugin Framework for Java)](https://github.com/pf4j/pf4j)** [![GitHub stars](https://img.shields.io/github/stars/pf4j/pf4j?style=social&color=white)](https://github.com/pf4j/pf4j/stargazers) — Lightweight, robust plugin framework for Java (Apache 2.0). Enables modular architectures where plugins can be dynamically loaded, started, stopped, and uninstalled at runtime with custom classloader isolation.
-- **[Apache Felix (OSGi Implementation)](https://github.com/apache/felix-dev)** [![GitHub stars](https://img.shields.io/github/stars/apache/felix-dev?style=social&color=white)](https://github.com/apache/felix-dev/stargazers) — Community implementation of the OSGi Service Platform and Atomos modular runtime, powering enterprise microkernel architectures and modular bundle lifecycles.
+- **[PF4J (Plugin Framework for Java)](https://github.com/pf4j/pf4j)** [![GitHub_Stars](https://img.shields.io/github/stars/pf4j/pf4j?style=social&color=white)](https://github.com/pf4j/pf4j/stargazers) — Lightweight, robust plugin framework for Java (Apache 2.0). Enables modular architectures where plugins can be dynamically loaded, started, stopped, and uninstalled at runtime with custom classloader isolation.
+- **[Apache Felix (OSGi Implementation)](https://github.com/apache/felix-dev)** [![GitHub_Stars](https://img.shields.io/github/stars/apache/felix-dev?style=social&color=white)](https://github.com/apache/felix-dev/stargazers) — Community implementation of the OSGi Service Platform and Atomos modular runtime, powering enterprise microkernel architectures and modular bundle lifecycles.
 
 ### 📦 Serverless Function SDKs & Adapters
 
 *Standardized function adapters, event schemas, and cloud provider runtime libraries.*
 
-- **[AWS Lambda Java Libraries](https://github.com/aws/aws-lambda-java-libs)** [![GitHub stars](https://img.shields.io/github/stars/aws/aws-lambda-java-libs?style=social&color=white)](https://github.com/aws/aws-lambda-java-libs/stargazers) — Official AWS Java Lambda primitives: `aws-lambda-java-core`, `aws-lambda-java-events`, and Log4j2 integration for serverless event processing.
-- **[Google Cloud Functions Java Framework](https://github.com/GoogleCloudPlatform/functions-framework-java)** [![GitHub stars](https://img.shields.io/github/stars/GoogleCloudPlatform/functions-framework-java?style=social&color=white)](https://github.com/GoogleCloudPlatform/functions-framework-java/stargazers) — Open-source FaaS runtime framework for writing portable Java functions that run locally, on Cloud Run, or inside Knative environments.
-- **[Azure Functions Java Worker](https://github.com/Azure/azure-functions-java-worker)** [![GitHub stars](https://img.shields.io/github/stars/Azure/azure-functions-java-worker?style=social&color=white)](https://github.com/Azure/azure-functions-java-worker/stargazers) — Dedicated out-of-process Java language worker for the Azure Functions runtime host, handling gRPC messaging and binding dispatch.
+- **[AWS Lambda Java Libraries](https://github.com/aws/aws-lambda-java-libs)** [![GitHub_Stars](https://img.shields.io/github/stars/aws/aws-lambda-java-libs?style=social&color=white)](https://github.com/aws/aws-lambda-java-libs/stargazers) — Official AWS Java Lambda primitives: `aws-lambda-java-core`, `aws-lambda-java-events`, and Log4j2 integration for serverless event processing.
+- **[Google Cloud Functions Java Framework](https://github.com/GoogleCloudPlatform/functions-framework-java)** [![GitHub_Stars](https://img.shields.io/github/stars/GoogleCloudPlatform/functions-framework-java?style=social&color=white)](https://github.com/GoogleCloudPlatform/functions-framework-java/stargazers) — Open-source FaaS runtime framework for writing portable Java functions that run locally, on Cloud Run, or inside Knative environments.
+- **[Azure Functions Java Worker](https://github.com/Azure/azure-functions-java-worker)** [![GitHub_Stars](https://img.shields.io/github/stars/Azure/azure-functions-java-worker?style=social&color=white)](https://github.com/Azure/azure-functions-java-worker/stargazers) — Dedicated out-of-process Java language worker for the Azure Functions runtime host, handling gRPC messaging and binding dispatch.
 
 ---
 
@@ -158,7 +158,7 @@ Contributions, project suggestions, and documentation enhancements are enthusias
 
 1. 🍴 **Fork the repository** to your personal GitHub account.
 2. 🌿 **Create a topic branch**: `git checkout -b feature/add-new-runtime`.
-3. 📝 **Edit `README.md`**: Follow existing table and list structures, providing factual pricing, GitHub star badges, and official documentation links.
+3. 📝 **Edit `README.md`**: Follow existing table and list structures, providing factual pricing, GitHub Stars_Badges, and official documentation links.
 4. 📬 **Submit a Pull Request** with a concise description of the addition and justification.
 
 ---
