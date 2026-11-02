@@ -1,189 +1,157 @@
-# Awesome-Java-Extensibility-Runtime
+<div align="center">
 
-## Top Java Extensibility & Runtime Ecosystem
+<img src="./assets/banner.svg" alt="Awesome Java Extensibility &amp; Runtime Ecosystem Banner" width="100%" />
 
+# 🚀 Awesome Java Extensibility & Runtime
 
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ishandutta2007/Awesome-Java-Extensibility-Runtime/graphs/commit-activity)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
+**Curated directory of enterprise SaaS cloud execution platforms, serverless function runtimes, Ahead-Of-Time (AOT) native compilation engines, and open-source JVM modular extensibility frameworks.**
 
-*Focused on Java UDF Runtimes, Serverless Functions & Self-Hosted Native Compilation*  
+*Discover battle-tested technologies to run Java User-Defined Functions (UDFs), sub-millisecond serverless handlers, high-throughput microservices, and dynamic modular plugin systems.*
 
-**Last updated: November 2026**
+[Sector Overview](#-sector-overview--market-dynamics) • [SaaS & Cloud Platforms](#-saas--cloud-hosted-runtimes) • [Open-Source Ecosystem](#-open-source-github-projects) • [Contributing](#-how-to-contribute)
 
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Java Extensibility & Runtime**. These tools enable organizations to execute Java code in managed environments—running UDFs inside databases, deploying serverless functions, and compiling native binaries—leveraging Java's type safety and JVM performance without managing the underlying infrastructure.
-
-
-
-**Examples** include Snowflake Java UDFs, Apache Spark Java API, AWS Lambda Java, Google Cloud Functions Java, Azure Functions Java, GraalVM, Red Hat OpenShift Java, Spring Cloud, Quarkus, and Oracle Java SE Subscription (the category leaders).
-
-
-
-**Open-source emphasis**: Java Extensibility & Runtime is a domain where open-source tooling is **exceptionally mature but bifurcated between managed runtimes and self-hosted frameworks**. **Quarkus** and **Spring Boot with GraalVM Native Image** are the leading open-source paths for building Java services—Quarkus offers fast startup and low memory footprint via native compilation, while Spring Boot's GraalVM support (verified with Spring MVC and embedded Tomcat) produces statically compiled native executables without a JVM . For serverless extensibility, **AWS Lambda Java** provides official libraries (`aws-lambda-java-core`, `aws-lambda-java-events`) on Maven Central , and **Snowflake Java UDFs** support both array and varargs parameter passing with SQL-Java type mapping . The critical caveat: **GraalVM's native image build is not a drop-in replacement**—it requires reachability metadata configuration and has limited dynamic feature support, though Spring Boot's AOT processing handles much of this automatically .
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Snowflake Java UDFs](https://docs.snowflake.com/en/developer-guide/udf/java/udf-java-designing)**  
-
-  Write UDF handlers in Java and call from SQL. Supports SQL-Java type mapping, array parameters via Java arrays or varargs, and inherits the caller's timezone (IANA database 2025b). Handlers are called once per row; initialization (constructor) has a longer timeout than execution. Best for Snowflake users wanting Java logic in SQL queries .
-
-
-
-- **[Apache Spark Java API](https://spark.apache.org/docs/latest/api/java/)**  
-
-  Spark's primary language API is Scala, but Java API provides access to RDDs, DataFrames, and Spark SQL. Spark 4.1.0-preview3 Javadoc available. Best for distributed data processing with Java teams—but Scala remains the more idiomatic choice .
-
-
-
-- **[AWS Lambda Java](https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html)**  
-
-  Serverless compute for Java with runtimes including Java 25, 21, 17, 11, and 8. Handler is a method receiving event and context objects. Official libraries include `aws-lambda-java-core` (required), `aws-lambda-java-events` (event types), `aws-lambda-java-log4j2` (logging), and the Durable Execution SDK for multi-step workflows. Best for AWS-native serverless Java functions .
-
-
-
-- **[Google Cloud Functions Java](https://cloud.google.com/functions/docs/concepts/java-runtime)**  
-
-  Cloud Run functions support Java 25, 21, 17, and 11 (with Java 11 deprecated). Uses the Functions Framework for Java. Specify runtime with `--runtime` and entry point with `--entry-point` (fully qualified class name). Best for Google Cloud-native serverless functions .
-
-
-
-- **[Azure Functions Java](https://learn.microsoft.com/en-us/azure/azure-functions/functions-reference-java)**  
-
-  Java support for Azure Functions with annotations like `@FunctionName`, `@HttpTrigger`, `@TableInput`, and `@TableOutput`. Supports input/output bindings, POJO serialization, and `OutputBinding<T>` for multiple outputs. Best for Azure-native serverless functions with binding-based integration .
-
-
-
-- **[GraalVM](https://www.graalvm.org/)**  
-
-  Polyglot VM with **Native Image** compilation—ahead-of-time compilation of Java to native executables. Eliminates JVM startup overhead, reduces memory footprint, and produces statically linked binaries. Best for CLI tools, microservices, and serverless functions where startup time matters—but requires reachability metadata and has limited dynamic feature support .
-
-
-
-- **[Red Hat OpenShift Java](https://www.redhat.com/en/technologies/cloud-computing/openshift)**  
-
-  Enterprise Kubernetes platform with OpenJDK support. **Critical caveat**: default OpenJDK settings do not work in containers—JVM heap defaults to 1/4 of container memory, so explicit `-Xmx` or `-XX:+UseCGroupMemoryLimitForHeap` configuration is mandatory. Best for enterprises running Java on OpenShift .
-
-
-
-- **[Spring Cloud](https://spring.io/projects/spring-cloud)**  
-
-  Tools for distributed systems patterns: configuration management, service discovery, circuit breakers, intelligent routing, and distributed messaging. Version 2025.1.x (Oakwood) supports Spring Boot 4.0.x/4.1.x. Works on laptop, bare metal, or managed platforms. Best for Spring Boot teams building microservices .
-
-
-
-- **[Quarkus](https://quarkus.io/)**  
-
-  Kubernetes-native Java framework optimized for GraalVM and HotSpot. Fast startup, low memory footprint, and extensive extension ecosystem (Kafka, MongoDB, Redis, Elasticsearch, Cassandra, etc.). Best for cloud-native Java services wanting fast startup and native compilation .
-
-
-
-- **[Oracle Java SE Subscription](https://www.oracle.com/java/technologies/javase-subscription.html)**  
-
-  Commercial support for Oracle JDK including Java 8 (which reached end of public updates in April 2019). Provides Premier Support, security patches, and tools like Java Mission Control and Flight Recorder. Best for organizations requiring commercial support for legacy Java versions .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Native Compilation & Cloud-Native Frameworks
-
-
-
-- **[Quarkus](https://github.com/quarkusio/quarkus)**  
-
-  The **leading open-source Kubernetes-native Java framework** (Apache 2.0). Optimized for GraalVM Native Image and HotSpot; features fast startup, low memory footprint, and 500+ extensions covering Kafka, MongoDB, Redis, Elasticsearch, Cassandra, and more. Dev Services auto-starts databases and message brokers in dev/test mode. **Best for cloud-native Java services** wanting native compilation and fast startup—but native image builds require reflection configuration for libraries not designed for GraalVM .
-
-
-
-- **[Spring Boot](https://github.com/spring-projects/spring-boot)**  
-
-  The most widely adopted Java framework (Apache 2.0) with **GraalVM Native Image support** via Spring AOT. Supports Cloud Native Buildpacks (Paketo Java Native Image buildpack) or GraalVM Native Build Tools. Spring MVC and embedded Tomcat are tested with native images. **Best for Spring ecosystem teams** wanting native compilation without leaving the Spring ecosystem—but native builds require more memory (8GB+ Docker allocation recommended on macOS) and have longer build times .
-
-
-
-### Serverless Function Libraries (AWS Lambda)
-
-
-
-- **[aws-lambda-java-libs](https://github.com/aws/aws-lambda-java-libs)**  
-
-  Official AWS libraries for Java Lambda functions: **`aws-lambda-java-core`** (required—defines handler interface and context object), **`aws-lambda-java-events`** (event input types), **`aws-lambda-java-log4j2`** (logging appender adding request ID to logs). Available on Maven Central. **Best for AWS Lambda Java functions**—but they are Lambda-specific, not general-purpose runtime libraries .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Apache Spark** — Open-source distributed compute engine (Apache 2.0) with Java API for RDDs, DataFrames, and Spark SQL. **Best for Java teams doing distributed data processing**—but Scala is the primary API and Java usage is secondary .
-
-- **Apache Felix Atomos** — OSGi framework for Java modularity; supports dynamic layer addition/removal on Java 9+ and bundle installation from module path/class path. **Best for OSGi-based extensibility**—niche use case for plugin architectures .
-
-
-
-**Frameworks for building custom systems**: For **cloud-native Java services with native compilation**, Quarkus or Spring Boot with GraalVM . For **AWS Lambda Java functions**, `aws-lambda-java-core` and related libraries . For **database UDFs**, Snowflake Java UDFs . For **containerized Java on Kubernetes**, configure explicit `-Xmx` or `-XX:+UseCGroupMemoryLimitForHeap` to override JVM heap defaults . No open-source project matches the **managed simplicity and per-second billing** of AWS Lambda Java or Google Cloud Functions Java—self-hosting means owning infrastructure and GraalVM build configuration.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Java runtime platforms handling production code must comply with organizational security policies; **self-hosted solutions place full responsibility for JVM tuning, dependency management, and patching on the operator**.
-
-- **Java extensibility is mature at the framework and serverless layers**—Quarkus and Spring Boot provide production-grade native compilation , and AWS Lambda libraries provide serverless function primitives . However, **GraalVM native image builds are not drop-in replacements**—reachability metadata is required for reflection-heavy libraries, and build times are significantly longer . **Containerized Java requires explicit heap configuration**—OpenJDK's default 1/4 container memory allocation does not work in constrained environments .
-
-- Verify license terms for commercial use; Quarkus and Spring Boot use Apache 2.0, and AWS Lambda libraries are Apache 2.0 .
-
-
+</div>
 
 ---
 
+## 📑 Table of Contents
 
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS & Cloud Hosted Runtimes](#-saas--cloud-hosted-runtimes)
+  - [Enterprise SaaS Comparison Matrix](#-enterprise-saas-comparison-matrix)
+- [🐙 Open-Source GitHub Projects](#-open-source-github-projects)
+  - [Full-Stack & Cloud-Native Frameworks](#-cloud-native-frameworks--aot-compilers)
+  - [RPC, Service Mesh & Extensibility Frameworks](#-distributed-rpc--service-mesh-frameworks)
+  - [Reactive & High-Throughput Runtimes](#-reactive--event-driven-runtimes)
+  - [Dynamic Plugin & Extensibility Frameworks](#-dynamic-plugin-frameworks--microkernel-engines)
+  - [Serverless SDKs & Cloud Function Adapters](#-serverless-function-sdks--adapters)
+- [🎯 Architectural Selection Guide](#-architectural-selection-guide)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚖️ Disclaimer & Compliance](#-disclaimer--compliance)
 
-**Made for Java developers, platform engineers, and organizations choosing their runtime and extensibility stack.**  
+---
 
-Let's make Java runtimes more open, but with clear eyes about the native compilation configuration and container heap tuning that self-hosting requires.
+## 📊 Sector Overview & Market Dynamics
+
+The global enterprise application runtime, serverless compute, and cloud platform market represents an estimated **$120B+ market size** (with the dedicated serverless and cloud-native Java runtime segment expanding at a **~23% CAGR**). 
+
+The industry demonstrates a **moderately to highly concentrated (oligopolistic) dynamic** at the infrastructure and hosted runtime tier, where hyperscalers (Microsoft Azure, Amazon AWS, Google Cloud, and Snowflake) command majority market share and capture outsized recurring cloud spend through managed execution primitives and enterprise commitments. Conversely, the **framework, compiler, and extensibility tier remains moderately fragmented and highly collaborative**: enterprises avoid single-vendor lock-in by pairing hyperscaler cloud infrastructure with open-source ecosystems (such as GraalVM Native Image, Quarkus, Spring Boot, and Apache Spark) backed by a consortium of stewards including Red Hat/IBM, Oracle, and the Apache Software Foundation.
+
+---
+
+## ☁️ SaaS & Cloud Hosted Runtimes
+
+Managed enterprise cloud runtimes deliver serverless event processing, in-database SQL user-defined computations, containerized orchestration, and enterprise JDK governance without infrastructure management overhead.
+
+### 🏢 Enterprise SaaS Comparison Matrix
+
+*The table below ranks major commercial cloud runtime vendors sorted by enterprise valuation / market capitalization (descending).*
+
+| Platform / Vendor | Category & Core Capability | Starting Tier Pricing | Free Tier / Trial Limit | Company Size (Valuation / Market Cap) |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Microsoft Azure Functions Java](https://learn.microsoft.com/en-us/azure/azure-functions/functions-reference-java)** | Serverless Event-Driven Compute | **$0.20 per 1M executions** + $0.000016/GB-s (Flex Consumption) | **Free Forever**: 1,000,000 executions and 400,000 GB-seconds per month | **~$3.1 Trillion** (Market Cap) |
+| **[Google Cloud Functions Java](https://cloud.google.com/functions/docs/concepts/java-runtime)** | Event-Driven Cloud Run Functions | **$0.40 per 1M invocations** + $0.0000025/GB-s (Tier 1 memory) | **Free Forever**: 2,000,000 invocations, 400,000 GB-seconds, and 200,000 GHz-seconds monthly | **~$2.1 Trillion** (Alphabet Market Cap) |
+| **[AWS Lambda Java](https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html)** | Serverless Event Compute & Durable Functions | **$0.20 per 1M requests** + $0.0000166667/GB-s (x86 architecture) | **Free Forever**: 1,000,000 free requests and 400,000 GB-seconds of compute time per month | **~$2.0 Trillion** (Amazon Market Cap) |
+| **[Oracle Java SE Subscription](https://www.oracle.com/java/technologies/javase-subscription.html)** | Commercial Enterprise JDK Licensing & Support | **$15.00 per employee / month** (Starting tier for 1–999 employees) | **30-day Free Trial** for Oracle Cloud Infrastructure (includes $300 cloud credits + Free Tier JDK for personal/development use) | **~$450 Billion** (Market Cap) |
+| **[Red Hat OpenShift Java](https://www.redhat.com/en/technologies/cloud-computing/openshift)** | Enterprise Hybrid Cloud Kubernetes Runtime | **$0.076 per 4 vCPU-hours** (Dedicated/Cloud starting hourly rate, or $800/yr per pair) | **60-day Free Evaluation Trial** with full self-managed cluster deployment privileges | **~$190 Billion** (IBM Market Cap) |
+| **[Snowflake Java UDFs](https://docs.snowflake.com/en/developer-guide/udf/java/udf-java-designing)** | Managed In-Database SQL Java User-Defined Functions | **$2.00 per credit** (Standard Edition virtual warehouse compute consumption) | **30-day Free Trial** including **$400 in free capacity credits** across supported clouds | **~$55 Billion** (Market Cap) |
+
+---
+
+## 🐙 Open-Source GitHub Projects
+
+Explore top-tier, community-governed open-source tools, native compilers, serverless adapters, and modular extension frameworks for the modern JVM.
+
+### ⚡ Cloud-Native Frameworks & AOT Compilers
+
+*High-performance web stacks, ahead-of-time (AOT) native compilation, and microservice backbones.*
+
+- **[Spring Boot](https://github.com/spring-projects/spring-boot)** [![GitHub stars](https://img.shields.io/github/stars/spring-projects/spring-boot?style=social&color=white)](https://github.com/spring-projects/spring-boot/stargazers) — The world's leading Java application framework (Apache 2.0). Features GraalVM Native Image compilation via Spring AOT, Docker Buildpacks integration, and native Spring MVC/Tomcat execution.
+- **[Apache Spark](https://github.com/apache/spark)** [![GitHub stars](https://img.shields.io/github/stars/apache/spark?style=social&color=white)](https://github.com/apache/spark/stargazers) — Distributed data processing engine (Apache 2.0) with first-class Java APIs for RDDs, DataFrames, structured streaming, and scalable SQL transformations across enterprise clusters.
+- **[GraalVM Compiler & Native Image](https://github.com/oracle/graal)** [![GitHub stars](https://img.shields.io/github/stars/oracle/graal?style=social&color=white)](https://github.com/oracle/graal/stargazers) — Polyglot VM and Ahead-Of-Time (AOT) compiler engine compiling Java code directly into instant-on, memory-efficient native executables with zero JVM warm-up.
+- **[Quarkus](https://github.com/quarkusio/quarkus)** [![GitHub stars](https://img.shields.io/github/stars/quarkusio/quarkus?style=social&color=white)](https://github.com/quarkusio/quarkus/stargazers) — Supersonic Subatomic Java (Apache 2.0). Kubernetes-native stack tailored for GraalVM Native Image and HotSpot, offering sub-millisecond boot times, continuous testing, and 500+ extensions.
+- **[Micronaut Core](https://github.com/micronaut-projects/micronaut-core)** [![GitHub stars](https://img.shields.io/github/stars/micronaut-projects/micronaut-core?style=social&color=white)](https://github.com/micronaut-projects/micronaut-core/stargazers) — Modern, JVM-based full-stack framework designed for modular microservices and serverless functions with compile-time dependency injection and zero-reflection native binaries.
+
+### 🌐 Distributed RPC & Service Mesh Frameworks
+
+*Enterprise microservice communication, governance, and protocol extensibility.*
+
+- **[Apache Dubbo](https://github.com/apache/dubbo)** [![GitHub stars](https://img.shields.io/github/stars/apache/dubbo?style=social&color=white)](https://github.com/apache/dubbo/stargazers) — High-performance, Java-based open-source RPC framework (Apache 2.0) providing microservice service discovery, traffic routing, intelligent load balancing, and plugin-based protocol extensibility.
+
+### 🚀 Reactive & Event-Driven Runtimes
+
+*Non-blocking, reactive event engines built for extreme concurrency and low memory usage.*
+
+- **[Eclipse Vert.x](https://github.com/eclipse-vertx/vert.x)** [![GitHub stars](https://img.shields.io/github/stars/eclipse-vertx/vert.x?style=social&color=white)](https://github.com/eclipse-vertx/vert.x/stargazers) — A tool-kit for building reactive applications on the JVM (Eclipse Public License / Apache 2.0). Event-driven, non-blocking runtime handling massive throughput with negligible resource consumption.
+
+### 🧩 Dynamic Plugin Frameworks & Microkernel Engines
+
+*In-process modularity, runtime isolation, and dynamic plugin architectures.*
+
+- **[PF4J (Plugin Framework for Java)](https://github.com/pf4j/pf4j)** [![GitHub stars](https://img.shields.io/github/stars/pf4j/pf4j?style=social&color=white)](https://github.com/pf4j/pf4j/stargazers) — Lightweight, robust plugin framework for Java (Apache 2.0). Enables modular architectures where plugins can be dynamically loaded, started, stopped, and uninstalled at runtime with custom classloader isolation.
+- **[Apache Felix (OSGi Implementation)](https://github.com/apache/felix-dev)** [![GitHub stars](https://img.shields.io/github/stars/apache/felix-dev?style=social&color=white)](https://github.com/apache/felix-dev/stargazers) — Community implementation of the OSGi Service Platform and Atomos modular runtime, powering enterprise microkernel architectures and modular bundle lifecycles.
+
+### 📦 Serverless Function SDKs & Adapters
+
+*Standardized function adapters, event schemas, and cloud provider runtime libraries.*
+
+- **[AWS Lambda Java Libraries](https://github.com/aws/aws-lambda-java-libs)** [![GitHub stars](https://img.shields.io/github/stars/aws/aws-lambda-java-libs?style=social&color=white)](https://github.com/aws/aws-lambda-java-libs/stargazers) — Official AWS Java Lambda primitives: `aws-lambda-java-core`, `aws-lambda-java-events`, and Log4j2 integration for serverless event processing.
+- **[Google Cloud Functions Java Framework](https://github.com/GoogleCloudPlatform/functions-framework-java)** [![GitHub stars](https://img.shields.io/github/stars/GoogleCloudPlatform/functions-framework-java?style=social&color=white)](https://github.com/GoogleCloudPlatform/functions-framework-java/stargazers) — Open-source FaaS runtime framework for writing portable Java functions that run locally, on Cloud Run, or inside Knative environments.
+- **[Azure Functions Java Worker](https://github.com/Azure/azure-functions-java-worker)** [![GitHub stars](https://img.shields.io/github/stars/Azure/azure-functions-java-worker?style=social&color=white)](https://github.com/Azure/azure-functions-java-worker/stargazers) — Dedicated out-of-process Java language worker for the Azure Functions runtime host, handling gRPC messaging and binding dispatch.
+
+---
+
+## 🎯 Architectural Selection Guide
+
+```
+                                  Architecture Decision Path
+                                               │
+             ┌─────────────────────────────────┴─────────────────────────────────┐
+             ▼                                                                   ▼
+    [Managed Cloud Serverless]                                          [Self-Hosted / AOT Native]
+             │                                                                   │
+    ┌────────┴────────┐                                                 ┌────────┴────────┐
+    ▼                 ▼                                                 ▼                 ▼
+[Hyperscaler FaaS] [In-Database UDF]                            [GraalVM Native Image] [Modular In-Process]
+  • AWS Lambda       • Snowflake Java UDF                         • Quarkus / Micronaut   • PF4J (Plugins)
+  • Azure Functions                                               • Spring Boot AOT       • Apache Felix (OSGi)
+  • Google Cloud Run
+```
+
+- **For Zero-Cold-Start Serverless Microservices**: Select **Quarkus** or **Micronaut** paired with **GraalVM Native Image**; compile ahead of time to eliminate JVM JIT warmup overhead.
+- **For Enterprise SQL Data Transformation**: Leverage **Snowflake Java UDFs** or **Apache Spark Java APIs** to execute logic in close physical proximity to analytics datasets.
+- **For Dynamic Desktop or Server Plugin Ecosystems**: Integrate **PF4J** for classloader-isolated extension points without full OSGi complexity.
+- **For Enterprise Hybrid Deployments**: Enforce container cgroup limits (`-XX:+UseContainerSupport`) on **Red Hat OpenShift** to ensure JVM heap sizing adheres to Kubernetes pod boundaries.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions, project suggestions, and documentation enhancements are enthusiastically welcome!
+
+1. 🍴 **Fork the repository** to your personal GitHub account.
+2. 🌿 **Create a topic branch**: `git checkout -b feature/add-new-runtime`.
+3. 📝 **Edit `README.md`**: Follow existing table and list structures, providing factual pricing, GitHub star badges, and official documentation links.
+4. 📬 **Submit a Pull Request** with a concise description of the addition and justification.
+
+---
+
+## ⚖️ Disclaimer & Compliance
+
+- This list is independently curated by the open-source community for educational and evaluation purposes.
+- All trademarks, service marks, company names, and product logos belong to their respective owners.
+- Cloud pricing rates, free tier quotas, and corporate valuations represent public disclosures as of **November 2026** and are subject to change by respective cloud providers.
+- Always benchmark native compilation memory overhead and test dynamic reflection configurations in staging environments before deploying native JVM binaries to mission-critical infrastructure.
+
+---
+
+<div align="center">
+
+**[⬆ Back to Top](#-awesome-java-extensibility--runtime)**
+
+</div>
